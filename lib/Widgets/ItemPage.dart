@@ -2,7 +2,7 @@ import 'package:clippy_flutter/arc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-
+import 'package:flutter/cupertino.dart';
 import 'CircleContaner.dart';
 import 'ElevatedBtnIcon.dart';
 import 'IconBtn.dart';
@@ -24,7 +24,109 @@ class ItemPage extends StatefulWidget {
 }
 
 class _ItemPageState extends State<ItemPage> {
-  int i=1;
+  double t1 = 0, t2 = 0, t3 = 0, t4 = 0, t5 = 0;
+  double tr = 0, tg = 0, tb = 0, ti = 0, to = 0;
+  int i = 1;
+  tn1() {
+    setState(() {
+      t1 = 2;
+      t2 = 0;
+      t3 = 0;
+      t4 = 0;
+      t5 = 0;
+    });
+  }
+
+  tn2() {
+    setState(() {
+      t1 = 0;
+      t2 = 2;
+      t3 = 0;
+      t4 = 0;
+      t5 = 0;
+    });
+  }
+
+  tn3() {
+    setState(() {
+      t1 = 0;
+      t2 = 0;
+      t3 = 2;
+      t4 = 0;
+      t5 = 0;
+    });
+  }
+
+  tn4() {
+    setState(() {
+      t1 = 0;
+      t2 = 0;
+      t3 = 0;
+      t4 = 2;
+      t5 = 0;
+    });
+  }
+
+  tn5() {
+    setState(() {
+      t1 = 0;
+      t2 = 0;
+      t3 = 0;
+      t4 = 0;
+      t5 = 2;
+    });
+  }
+
+  tr1() {
+    setState(() {
+      tr = 2;
+      tg = 0;
+      tb = 0;
+      ti = 0;
+      to = 0;
+    });
+  }
+
+  tr2() {
+    setState(() {
+      tr = 0;
+      tg = 2;
+      tb = 0;
+      ti = 0;
+      to = 0;
+    });
+  }
+
+  tr3() {
+    setState(() {
+      tr = 0;
+      tg = 0;
+      tb = 2;
+      ti = 0;
+      to = 0;
+    });
+  }
+
+  tr4() {
+    setState(() {
+      tr = 0;
+      tg = 0;
+      tb = 0;
+      ti = 2;
+      to = 0;
+    });
+  }
+
+  tr5() {
+    setState(() {
+      tr = 0;
+      tg = 0;
+      tb = 0;
+      ti = 0;
+      to = 2;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,17 +202,13 @@ class _ItemPageState extends State<ItemPage> {
                                       ),
                                     ],
                                   ),
-                                  child:InkWell(
-                                    onTap:(){
+                                  child: InkWell(
+                                    onTap: () {
                                       setState(() {
-                                      if(i!=1)
-                                            i--;
-
+                                        if (i != 1) i--;
                                       });
-                                    } ,
-                                    child: Icon(
-                                        CupertinoIcons.minus,
-                                        size: 18),
+                                    },
+                                    child: Icon(CupertinoIcons.minus, size: 18),
                                   ),
 
                                   // Icon(
@@ -140,16 +238,13 @@ class _ItemPageState extends State<ItemPage> {
                                       ),
                                     ],
                                   ),
-                                  child:InkWell(
-                                    onTap:(){
+                                  child: InkWell(
+                                    onTap: () {
                                       setState(() {
                                         i++;
-
                                       });
-                                    } ,
-                                    child: Icon(
-                                        CupertinoIcons.plus,
-                                        size: 18),
+                                    },
+                                    child: Icon(CupertinoIcons.plus, size: 18),
                                   ),
                                   // Icon(
                                   //   CupertinoIcons.plus,
@@ -186,22 +281,32 @@ class _ItemPageState extends State<ItemPage> {
                             CirclContainer(
                               txt: "5",
                               color: Colors.white,
+                              Width: t1,
+                              ontap: tn1,
                             ),
                             CirclContainer(
                               txt: "6",
                               color: Colors.white,
+                              Width: t2,
+                              ontap: tn2,
                             ),
                             CirclContainer(
                               txt: "7",
                               color: Colors.white,
+                              Width: t3,
+                              ontap: tn3,
                             ),
                             CirclContainer(
                               txt: "8",
                               color: Colors.white,
+                              Width: t4,
+                              ontap: tn4,
                             ),
                             CirclContainer(
                               txt: "9",
                               color: Colors.white,
+                              Width: t5,
+                              ontap: tn5,
                             ),
                           ],
                         ),
@@ -224,22 +329,32 @@ class _ItemPageState extends State<ItemPage> {
                             CirclContainer(
                               txt: "",
                               color: Colors.red,
+                              Width: tr,
+                              ontap: tr1,
                             ),
                             CirclContainer(
                               txt: "",
                               color: Colors.green,
+                              Width: tg,
+                              ontap: tr2,
                             ),
                             CirclContainer(
                               txt: "",
                               color: Colors.blue,
+                              Width: tb,
+                              ontap: tr3,
                             ),
                             CirclContainer(
                               txt: "",
                               color: Colors.indigo,
+                              Width: ti,
+                              ontap: tr4,
                             ),
                             CirclContainer(
                               txt: "",
                               color: Colors.orange,
+                              Width: to,
+                              ontap: tr5,
                             ),
                           ],
                         ),
@@ -257,7 +372,7 @@ class _ItemPageState extends State<ItemPage> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                "${int.parse(widget.price)*i}\$",
+                                "${int.parse(widget.price) * i}\$",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20,

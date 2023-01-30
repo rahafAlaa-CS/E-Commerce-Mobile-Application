@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project/Pages/HomePage.dart';
 import 'package:flutter/cupertino.dart';
-class CartAppBar extends StatelessWidget {
-  const CartAppBar({Key? key}) : super(key: key);
+import '../Pages/HomePage.dart';
+
+
+class MeAppBar extends StatelessWidget {
+  const MeAppBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class CartAppBar extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 20),
             child: Text(
-              "Cart",
+              "Me",
               style: TextStyle(
                 fontSize: 23,
                 fontWeight: FontWeight.bold,
@@ -31,8 +33,8 @@ class CartAppBar extends StatelessWidget {
             ),
           ),
           Spacer(),
-          Icon(Icons.more_vert,
-          size: 30,
+          Icon(Icons.settings,
+            size: 30,
             color: Colors.teal,
           ),
         ],

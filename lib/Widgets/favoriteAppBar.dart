@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project/Pages/HomePage.dart';
 import 'package:flutter/cupertino.dart';
-class CartAppBar extends StatelessWidget {
-  const CartAppBar({Key? key}) : super(key: key);
+import '../Pages/HomePage.dart';
+
+class FavoriteAppBar extends StatelessWidget {
+  const FavoriteAppBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class CartAppBar extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 20),
             child: Text(
-              "Cart",
+              "Favorite",
               style: TextStyle(
                 fontSize: 23,
                 fontWeight: FontWeight.bold,
@@ -31,8 +32,8 @@ class CartAppBar extends StatelessWidget {
             ),
           ),
           Spacer(),
-          Icon(Icons.more_vert,
-          size: 30,
+          Icon(Icons.checklist_sharp,
+            size: 30,
             color: Colors.teal,
           ),
         ],

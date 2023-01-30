@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter/cupertino.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'Pages/CartPage.dart';
 import 'Pages/HomePage.dart';
 import 'Widgets/ItemPage.dart';
-
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

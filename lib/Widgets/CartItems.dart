@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter/cupertino.dart';
 class CartItems extends StatefulWidget {
   final String image;
   final String productTitle;

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class CartBottonNavBar extends StatelessWidget {
   const CartBottonNavBar({Key? key}) : super(key: key);
@@ -39,11 +40,14 @@ class CartBottonNavBar extends StatelessWidget {
                 color: Colors.teal,
                 borderRadius: BorderRadius.circular(20),
               ),
-              child: Text("Check out",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      fontSize: 20)),
+              child: TextButton(
+                child: Text("Check out",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: 20)),
+                onPressed: () {},
+              ),
             ),
           ],
         ),
